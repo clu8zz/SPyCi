@@ -1,2 +1,2 @@
-web: python views.py --log-file -
-worker: python worker.py
+web: gunicorn views.py --log-file -
+
