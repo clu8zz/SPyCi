@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../static/materialize/css/materialize.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/materialize/js/materialize.js"></script>
+
+	<title>Home</title>
+</head>
+<body>
+
+ <blockquote>
+      <h1><center>Add your profile to our database!</center></h1>
+ </blockquote>
+
+
+<div class="container">
+
+   <center>   
+   <br>
+   <br>
+   <strong>{{notify}}</strong>
+	{% from "_formhelpers.html" import render_field %}
+		<form method=post action="/profile" enctype=multipart/form-data>
+		  <dl>
+		    {{ render_field(form.fname) }}
+		    {{ render_field(form.lname) }}
+		    {{ render_field(form.username) }}
+		    {{ render_field(form.ID)}}
+		    {{ render_field(form.age) }}
+		    {{ render_field(form.sex) }}
+		   <input type="file" name="file">
+		    <input class="btn-large waves-effect waves-light" type="submit" value="Submit" name="file">
+		  </dl>
+		  
+		</form>
+  </center>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('select').material_select();
+  });
+</script>
+
+
+</body>
+</html>

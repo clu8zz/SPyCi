@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../static/materialize/css/materialize.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/materialize/js/materialize.js"></script>
+	<title>Profiles</title>
+</head>
+<body>
+<ul id="navigation" class="collection">
+    {% for item in profiles %}
+  	    <li class="collection-item"><h3>User {{loop.index}}</h3></li> 
+        <li class="collection-item">First name: {{ item.firstname }}</li>
+        <li class="collection-item">Last name: {{ item.lastname }}</li>
+        <li class="collection-item">ID Number: {{ item.Idnumber }}</li>
+        <li class="collection-item">Gender: {{ item.gender }}</li>
+        <li class="collection-item">Age: {{ item.age}}</li>
+        <li class="collection-item">Profile added on: {{ item.date }}</li>
+
+
+    {% endfor %}
+    </ul>
+</body>
+</html>

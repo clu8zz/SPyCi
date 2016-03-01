@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../static/materialize/css/materialize.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/materialize/js/materialize.js"></script>
+	<title>{{profile.firstname}}</title>
+</head>
+<body>
+
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="../static/uploads/{{profile.image}}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+               <p>{{profile.firstname}} {{profile.lastname}}</p>
+                <p>Profile added on the  {{profile.date}}</p>
+                 <p>Username: {{profile.username}}</p>
+                  <p>ID: {{profile.Idnumber}}</p>
+                   <p>sex: {{profile.gender}}</p>
+                   <p>age: {{profile.age}}</p>
+                  
+                  
+
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>
