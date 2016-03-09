@@ -2,7 +2,7 @@ from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:620070733@localhost/project'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://pzzefhssgkjmcx:jCBwCVMY6h14IJrvXRGwBWnOzp@ec2-107-21-101-67.compute-1.amazonaws.com:5432/darmgk9hj6s40v'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 db = SQLAlchemy(app)
 
@@ -28,3 +28,6 @@ class Profiles(db.Model):
         self.image=image
     def __repr__(self):
         return '<User %r>' % self.username
+
+
+
